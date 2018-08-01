@@ -14,14 +14,16 @@ Summary: A wrapper around Michel Scheffers's libassp (Advanced Speech Signal Pro
 Current build status
 ====================
 
-Linux: [![Circle CI](https://circleci.com/gh/conda-forge/r-wrassp-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/r-wrassp-feedstock)
-OSX: [![TravisCI](https://travis-ci.org/conda-forge/r-wrassp-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/r-wrassp-feedstock)
-Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/r-wrassp-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/r-wrassp-feedstock/branch/master)
+[![Linux](https://img.shields.io/circleci/project/github/conda-forge/r-wrassp-feedstock/master.svg?label=Linux)](https://circleci.com/gh/conda-forge/r-wrassp-feedstock)
+[![OSX](https://img.shields.io/travis/conda-forge/r-wrassp-feedstock/master.svg?label=macOS)](https://travis-ci.org/conda-forge/r-wrassp-feedstock)
+[![Windows](https://img.shields.io/appveyor/ci/conda-forge/r-wrassp-feedstock/master.svg?label=Windows)](https://ci.appveyor.com/project/conda-forge/r-wrassp-feedstock/branch/master)
 
 Current release info
 ====================
-Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/r-wrassp/badges/version.svg)](https://anaconda.org/conda-forge/r-wrassp)
-Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/r-wrassp/badges/downloads.svg)](https://anaconda.org/conda-forge/r-wrassp)
+
+| Name | Downloads | Version | Platforms |
+| --- | --- | --- | --- |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-r--wrassp-green.svg)](https://anaconda.org/conda-forge/r-wrassp) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/r-wrassp.svg)](https://anaconda.org/conda-forge/r-wrassp) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/r-wrassp.svg)](https://anaconda.org/conda-forge/r-wrassp) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/r-wrassp.svg)](https://anaconda.org/conda-forge/r-wrassp) |
 
 Installing r-wrassp
 ===================
@@ -66,6 +68,7 @@ To manage the continuous integration and simplify feedstock maintenance
 Using the ``conda-forge.yml`` within this repository, it is possible to re-render all of
 this feedstock's supporting files (e.g. the CI configuration files) with ``conda smithy rerender``.
 
+For more information please check the [conda-forge documentation](https://conda-forge.org/docs/).
 
 Terminology
 ===========
