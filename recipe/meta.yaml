@@ -1,5 +1,4 @@
-{% set version = '0.1.4' %}
-
+{% set version = '0.1.8' %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,49 +9,58 @@ package:
 source:
   fn: wrassp_{{ version }}.tar.gz
   url:
-    - https://cran.r-project.org/src/contrib/wrassp_{{ version }}.tar.gz
-    - https://cran.r-project.org/src/contrib/Archive/wrassp/wrassp_{{ version }}.tar.gz
-  sha256: f6853cba00cd8350b2fb9d140f8cd385ff6e14dee6f7de260c93023079ff3070
+    - {{ cran_mirror }}/src/contrib/wrassp_{{ version }}.tar.gz
+    - {{ cran_mirror }}/src/contrib/Archive/wrassp/wrassp_{{ version }}.tar.gz
+  sha256: f3e8c595f364ab3c558121d5706f7918b18720ac7b48e74f722643763b055d14
 
 build:
   merge_build_host: True  # [win]
-  number: 1
+  number: 0
   skip: true  # [win32]
-
   rpaths:
     - lib/R/lib/
     - lib/
 
 requirements:
   build:
-    - posix                # [win]
-    - {{ compiler('c') }}        # [unix]
-    - {{ compiler('m2w64_c') }}  # [win]
+    - {{ compiler('c') }}        # [not win]
+    - {{native}}toolchain        # [win]
+    - {{posix}}filesystem        # [win]
+    - {{posix}}make
+    - {{posix}}sed               # [win]
+    - {{posix}}coreutils         # [win]
+    - {{posix}}zip               # [win]
   host:
     - r-base
-
   run:
     - r-base
+    - {{native}}gcc-libs         # [win]
 
 test:
   commands:
-    - $R -e "library('wrassp')"  # [not win]
+    - $R -e "library('wrassp')"           # [not win]
     - "\"%R%\" -e \"library('wrassp')\""  # [win]
 
 about:
   home: https://github.com/IPS-LMU/wrassp
   license: GPL (>= 3)
-  summary: A wrapper around Michel Scheffers's libassp (Advanced Speech Signal Processor). The
-    libassp library aims at providing functionality for handling speech signal files
-    in most common audio formats and for performing analyses common in phonetic science/speech
-    science. This includes the calculation of formants, fundamental frequency, root
-    mean square, auto correlation, a variety of spectral analyses, zero crossing rate,
-    filtering etc. This wrapper provides R with a large subset of libassp's signal processing
-    functions and provides them to the user in a (hopefully) user-friendly manner.
+  summary: A wrapper around Michel Scheffers's 'libassp' (<http://libassp.sourceforge.net/>).  The
+    'libassp' (Advanced Speech Signal Processor) library aims at providing functionality
+    for handling speech signal files in most common audio formats and for performing
+    analyses common in phonetic science/speech science. This includes the calculation
+    of formants, fundamental frequency, root mean square, auto correlation, a variety
+    of spectral analyses, zero crossing rate, filtering etc. This wrapper provides R
+    with a large subset of 'libassp's signal processing functions and provides them
+    to the user in a (hopefully) user-friendly manner.
   license_family: GPL3
+  license_file: '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3'  # [unix]
+  license_file: '{{ environ["PREFIX"] }}\R\share\licenses\GPL-3'  # [win]
 
 extra:
   recipe-maintainers:
     - johanneskoester
     - bgruening
     - daler
+    - jdblischak
+    - cbrueffer
+    - dbast
