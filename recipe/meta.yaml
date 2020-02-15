@@ -32,9 +32,11 @@ requirements:
     - {{posix}}zip               # [win]
   host:
     - r-base
+    - r-tibble
   run:
     - r-base
     - {{native}}gcc-libs         # [win]
+    - r-tibble
 
 test:
   commands:
