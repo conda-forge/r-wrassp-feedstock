@@ -3,7 +3,7 @@ About r-wrassp
 
 Home: https://github.com/IPS-LMU/wrassp
 
-Package license: GPL (>= 3)
+Package license: GPL-3.0-or-later
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-wrassp-feedstock/blob/master/LICENSE.txt)
 
