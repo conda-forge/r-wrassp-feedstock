@@ -1,4 +1,4 @@
-{% set version = "1.0.2" %}
+{% set version = "1.0.3" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,7 +10,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/wrassp_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/wrassp/wrassp_{{ version }}.tar.gz
-  sha256: 917cff2ffcef90346ff2717962d61e512e40ee5cbd31fafd2d4e2d5429cf62fe
+  sha256: 473076bde19f82b9b69a93ffeb4f7b31570aa1843834f5c1ceb0164457c4b40c
 
 build:
   merge_build_host: true  # [win]
