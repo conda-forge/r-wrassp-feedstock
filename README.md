@@ -1,11 +1,22 @@
+About r-wrassp-feedstock
+========================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-wrassp-feedstock/blob/main/LICENSE.txt)
+
 About r-wrassp
-==============
+--------------
 
 Home: https://github.com/IPS-LMU/wrassp
 
 Package license: GPL-3.0-or-later
 
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-wrassp-feedstock/blob/main/LICENSE.txt)
+Summary: A wrapper around Michel Scheffers's 'libassp' (<http://libassp.sourceforge.net/>).  The 'libassp' (Advanced Speech Signal Processor) library aims at providing functionality for handling speech signal files in most common audio formats and for performing analyses common in phonetic science/speech science. This includes the calculation of formants, fundamental frequency, root mean square, auto correlation, a variety of spectral analyses, zero crossing rate, filtering etc. This wrapper provides R with a large subset of 'libassp's signal processing functions and provides them to the user in a (hopefully) user-friendly manner.
+About r-wrassp
+--------------
+
+Home: https://github.com/IPS-LMU/wrassp
+
+Package license: GPL-3.0-or-later
 
 Summary: A wrapper around Michel Scheffers's 'libassp' (<http://libassp.sourceforge.net/>).  The 'libassp' (Advanced Speech Signal Processor) library aims at providing functionality for handling speech signal files in most common audio formats and for performing analyses common in phonetic science/speech science. This includes the calculation of formants, fundamental frequency, root mean square, auto correlation, a variety of spectral analyses, zero crossing rate, filtering etc. This wrapper provides R with a large subset of 'libassp's signal processing functions and provides them to the user in a (hopefully) user-friendly manner.
 
