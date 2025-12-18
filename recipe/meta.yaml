@@ -1,4 +1,4 @@
-{% set version = "1.0.5" %}
+{% set version = "1.0.6" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,10 +9,10 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/wrassp_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/wrassp/wrassp_{{ version }}.tar.gz
-  sha256: f2d3d49070d93c9ef81b4947f4ff043dc8916bad873b1c026839c8e77a803eb1
+  sha256: 29484cd79e29bb414f5aaac5726b07677d29f155d2dea920d39becba828c8a16
 
 build:
-  number: 2
+  number: 0
   rpaths:
     - lib/R/lib/
     - lib/
